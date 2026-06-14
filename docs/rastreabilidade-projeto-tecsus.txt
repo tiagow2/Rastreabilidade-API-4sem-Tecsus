@@ -1,0 +1,596 @@
+Rastreabilidade Projeto Tecsus
+Este documento define o sistema de rastreabilidade utilizado no projeto, descrevendo como solicitações, requisitos, tarefas, implementações e testes são relacionados ao longo do ciclo de desenvolvimento.
+
+A rastreabilidade permite acompanhar a evolução do projeto desde a solicitação inicial até o deploy da funcionalidade, garantindo maior organização, transparência e facilidade de manutenção.
+
+Índice
+Glossário Geral
+Convenção de Identificadores (IDs)
+Requisitos Funcionais
+Requisitos Não Funcionais
+User Stories
+Sprint Backlog — Tarefas Técnicas
+Convenção de Commits
+Fluxo de Rastreabilidade
+Matrizes de Rastreabilidade
+
+1. Glossário Geral
+Define os principais termos técnicos utilizados no projeto.
+
+Termo
+Descrição
+Request
+Solicitação inicial de funcionalidade ou alteração
+Requisito
+Descrição formal de uma necessidade do sistema
+Issue
+Tarefa registrada no sistema de gerenciamento de projeto
+Branch
+Ramificação do repositório utilizada para desenvolvimento
+Commit
+Registro de alteração no código
+Merge Request
+Solicitação para integrar código em outra branch
+Pipeline
+Processo automatizado de build, testes e validação
+Deploy
+Publicação da aplicação em ambiente de execução
+
+
+2. Convenção de Identificadores (IDs)
+2.1 Objetivo
+Os IDs são identificadores padronizados utilizados para representar os diferentes elementos do projeto, permitindo rastreabilidade entre artefatos como solicitações, requisitos, tarefas, testes e versões do sistema.
+
+2.2 Glossário de IDs
+Prefixo
+Tipo
+Descrição
+REQ
+Requisito
+Solicitação inicial
+RF
+Requisito funcional
+Funcionalidade do sistema
+RNF
+Requisito não funcional
+Características técnicas do sistema
+US
+User Story
+Descrição curta de uma necessidade do usuário
+ISSUE
+Issue
+Tarefa criada no Jira
+BR
+Branch
+Branch de desenvolvimento
+MR
+Merge Request
+Solicitação de merge
+TC
+Test Case
+Caso de teste
+REL
+Release
+Versão do sistema
+
+
+2.3 Estrutura dos Identificadores
+PREFIXO-NÚMERO
+
+Exemplo: RF-003 — RF indica Requisito Funcional; 003 representa o terceiro requisito funcional do projeto.
+
+3. Requisitos Funcionais
+ID
+Descrição
+RF-01
+Modelo de Dados Dinâmico: Capacidade de receber e registrar estações meteorológicas equipadas com diversos tipos de sensores.
+RF-02
+CRUD Completo: Funcionalidades de criação, leitura, atualização e exclusão para Estações, Parâmetros, Alertas e Usuários.
+RF-03
+Recepção de Dados: Serviço em Node.js para processamento e armazenamento contínuo dos dados enviados via MQTT.
+RF-04
+Dashboards e Relatórios: Visualização interativa dos parâmetros climáticos e geração de pelo menos 3 relatórios estatísticos distintos.
+RF-05
+Geração de Alertas: Criação automática de notificações baseadas em condições meteorológicas específicas.
+RF-06
+Datalogger e Hardware: Construção física da estação meteorológica e implementação de um datalogger embarcado.
+RF-07
+Tutorial Educativo: Desenvolvimento de um guia explicativo integrado ao sistema sobre o significado de cada parâmetro medido.
+RF-08
+Controle de Acesso: Implementação de permissões com no mínimo dois níveis: administrador e público.
+
+
+4. Requisitos Não Funcionais
+ID
+Descrição
+RNF-01
+Experiência do Usuário (UX): O design dos dashboards em React deve priorizar a usabilidade e estética.
+RNF-02
+Documentação de APIs: Elaboração detalhada para todas as rotas de consumo, incluindo exemplos de uso.
+RNF-03
+Integração Contínua (CI): Implementação de pipelines automatizadas no GitLab para testes de código.
+RNF-04
+Deploy Automatizado: Infraestrutura configurada via Docker para rodar em nuvem (AWS) respeitando as restrições de orçamento da ONG.
+RNF-05
+Performance IoT: A API deve suportar múltiplas conexões assíncronas simultâneas de dispositivos.
+
+
+5. User Stories
+5.1 Definição
+User Story é uma descrição curta de uma necessidade do usuário, escrita sob a perspectiva de quem utilizará o sistema. Estrutura padrão: "Eu como [tipo de usuário], desejo [ação], para [objetivo]".
+
+5.2 Backlog do Produto
+ID
+Prioridade
+User Story
+Sprint
+US-01
+Alta
+Como usuário, quero que o sistema seja capaz de registrar novas contas, para que eu consiga criar novas contas e acessar as funcionalidades do dashboard.
+1
+US-02
+Alta
+Como usuário, quero realizar Login via e-mail e senha, para que eu possa acessar as principais funcionalidades do dashboard com segurança.
+1
+US-03
+Alta
+Como administrador, quero gerenciar (criar, ler, atualizar e excluir) estações meteorológicas, para que o sistema sempre mantenha os dados organizados e atualizados.
+1
+US-04
+Alta
+Como administrador, quero que o sistema possua um endpoint de ingestão de dados, para que as informações enviadas pelas estações sejam validadas conforme o protocolo técnico e persistidas de forma segura.
+1
+US-05
+Alta
+Como administrador, quero que o sistema registre os dados validados em um banco, para garantir a integridade histórica sem perdas.
+1
+US-06
+Alta
+Como administrador, quero configurar limites para os parâmetros climáticos, para que o sistema saiba o que define uma situação de risco.
+1
+US-07
+Alta
+Como usuário, quero ser notificado em tempo real quando um limite climático for atingido, para que eu possa tomar medidas preventivas imediatas em casos de eventos críticos.
+1
+US-08
+Alta
+Como administrador, quero que o sistema possua controle de níveis de acesso, para que a segurança e integridade dos dados sejam garantidas.
+1
+US-09
+Alta
+Como usuário, quero poder visualizar e atualizar meus dados do perfil, para que as minhas informações se mantenham atualizadas e seguras.
+1
+US-12
+Alta
+Como usuário, quero visualizar a última leitura de cada estação através de cards, para saber as condições climáticas exatas do momento.
+2
+US-13
+Alta
+Como usuário, quero visualizar a variação dos dados em gráficos de linha, para identificar o comportamento do clima nas últimas 24 horas.
+2
+US-14
+Alta
+Como usuário, quero exportar os dados coletados em formato CSV, para documentar e compartilhar as leituras das estações.
+2
+US-15
+Média
+Como usuário, quero que o relatório apresente análises automáticas de padrões, para facilitar a compreensão dos dados apresentados.
+2
+US-16
+Alta
+Como administrador, quero ter a opção de cadastrar uma estação e poder associá-la a uma ONG, para que tenha dados mais detalhados sobre os parâmetros e localização da estação.
+2
+US-10
+Alta
+Como usuário, quero acessar um explicativo com o significado de cada parâmetro medido, para que compreenda corretamente as informações técnicas.
+3
+US-17
+Média
+Como administrador responsável (Nível superior), quero cadastrar outros administradores com diferentes níveis de moderação, para que a gestão operacional seja descentralizada sem comprometer a integridade da plataforma.
+3
+US-18
+Média
+Como usuário, quero que o sistema seja capaz de enviar notificações sobre os alertas, para que eu saiba quando ocorre a emissão de alertas para tomar medidas provisórias em situações críticas.
+3
+US-19
+Baixa
+Como usuário, quero que o sistema permita a aplicação de filtros e uma pesquisa detalhada das estações, para que eu consiga encontrar com mais facilidade as estações e ONGs que cobrem minhas regiões de interesse.
+3
+US-20
+Baixa
+Como administrador, quero que o sistema permita cadastrar parâmetros com suas principais informações (valor, offset e nome), para que eu tenha uma maior diversidade e conhecimento dos dados coletados.
+3
+
+
+6. Sprint Backlog — Tarefas Técnicas
+Lista completa das issues do Jira por sprint, relacionando cada tarefa técnica à sua User Story correspondente.
+
+Issue
+Descrição
+Sprint
+SCRUM-35
+Desenvolver interface de cadastro e integração com o back
+1
+SCRUM-36
+Desenvolver interface de cadastro e integração com o back (complemento)
+1
+SCRUM-37
+Desenvolver lógica de autenticação — backend
+1
+SCRUM-38
+Desenvolver lógica de autenticação — integração
+1
+SCRUM-39
+Desenvolver lógica de autenticação — testes
+1
+SCRUM-40
+Desenvolver CRUD de estações — backend
+1
+SCRUM-41
+Desenvolver interface de login
+1
+SCRUM-45
+Desenvolver CRUD de estações — frontend
+1
+SCRUM-48
+Implementar features de criação de estações, usuários e alertas (backend)
+1
+SCRUM-49
+Implementar features de criação de estações, usuários e alertas (frontend)
+1
+SCRUM-50
+Implementar configuração de limites de parâmetros climáticos (alertas)
+1
+SCRUM-51
+Adicionar testes unitários do datalogger
+1
+SCRUM-52
+Tratar dados recebidos pelo datalogger
+1
+SCRUM-53
+Registrar dados validados no banco (datalogger)
+1
+SCRUM-56
+Implementar notificação em tempo real — backend
+1
+SCRUM-60
+Implementar notificação em tempo real — frontend
+1
+SCRUM-63
+Implementar controle de níveis de acesso
+1
+SCRUM-67
+Desenvolvimento da interface de usuário
+1
+SCRUM-68
+Integração da interface de usuário com backend
+1
+SCRUM-73
+Desenvolver componente reutilizável para os cards (mockup)
+2
+SCRUM-74
+Desenvolver lógica frontend para que os cards recebam última leitura
+2
+SCRUM-75
+Visualizar variação dos dados em gráficos de linha (US-13)
+2
+SCRUM-76
+Desenvolver lógica backend para buscar dados no período especificado
+2
+SCRUM-77
+Desenvolver lógica frontend para requisição dos dados do backend
+2
+SCRUM-78
+Desenvolver interface e gráficos (padrões de exibição e legibilidade)
+2
+SCRUM-79
+Exportar dados coletados em formato CSV (US-14)
+2
+SCRUM-80
+Desenvolver lógica backend para geração de CSV
+2
+SCRUM-81
+Desenvolver lógica frontend para receber o CSV gerado
+2
+SCRUM-82
+Relatório com análises automáticas de padrões (US-15)
+2
+SCRUM-83
+Desenvolver lógica para implementar valores de cada parâmetro no relatório
+2
+SCRUM-84
+Implementar lógica de Template Strings para frases dinâmicas baseadas em dados
+2
+SCRUM-69 
+Acessar explicativo com o significado de cada parâmetro medido 
+3
+SCRUM-71 
+Escrever a definição de cada parâmetro utilizado (Backend) 
+3
+SCRUM-86 
+Cadastrar outros administradores com diferentes níveis de moderação 
+3
+SCRUM-87 
+Enviar notificações sobre os alertas 
+3
+SCRUM-114 
+Alterar lógica backend para geração de alertas 
+3
+SCRUM-88 
+Aplicação de filtros e pesquisa detalhada 
+3
+SCRUM-89 
+Cadastrar parâmetros (valor, offset e nome) 
+3
+
+
+7. Convenção de Commits
+7.1 Objetivo
+O projeto utiliza o padrão Conventional Commits para padronizar o histórico de alterações, facilitar o code review e fortalecer a rastreabilidade entre requisitos, implementação e commits.
+
+7.2 Estrutura
+tipo[ID-task]: descrição da alteração
+
+Exemplo: feat[SCRUM-04]: implementação do dashboard meteorológico
+
+7.3 Prefixos
+Prefixo
+Significado
+feat
+nova funcionalidade
+fix
+correção de bug
+refactor
+melhoria de código
+docs
+alteração em documentação
+style
+alteração de estilo
+
+
+8. Fluxo de Rastreabilidade
+O fluxo descreve como os artefatos se relacionam ao longo do desenvolvimento:
+
+Request → Requisito → Issue (Jira) → Branch → Commit → Merge Request → Pipeline CI → Code Review → Merge na Develop → Merge na Main → Deploy
+
+9. Matrizes de Rastreabilidade
+9.1 Matriz de Rastreabilidade Principal
+Matriz central do documento conectando requisito, User Story, issue, branch, commit, teste e release. Sprint 1 concluída (azul), Sprint 2 concluída (verde), Sprint 3 em andamento (laranja). Linhas marcadas com [PREENCHER] aguardam dados do GitLab.
+
+SPRINT 1 — Concluída
+Requisito
+User Story
+Issue
+Branch
+Commit
+Release
+RF-01
+US-03
+SCRUM-45
+feat/SCRUM-48-49
+feat[SCRUM-48-49]
+REL-01
+RF-02
+US-01
+SCRUM-40
+feat/SCRUM-35-36
+feat[SCRUM-35]
+REL-01
+RF-02
+US-01
+SCRUM-40
+feat/SCRUM-35-36
+fix[SCRUM-35]
+REL-01
+RF-02
+US-03
+SCRUM-45
+feat/SCRUM-48-49
+feat[SCRUM-48-49]
+REL-01
+RF-02
+US-03
+SCRUM-45
+feat/SCRUM-48-49
+fix[SCRUM-48-49]
+REL-01
+RF-03
+US-04
+SCRUM-48
+feat/SCRUM-48-49
+feat[SCRUM-48-49]
+REL-01
+RF-03
+US-05
+SCRUM-51
+feat/SCRUM-51-52
+feat[SCRUM-51-52]
+REL-01
+RF-03
+US-05
+SCRUM-53
+feat/SCRUM-53-54
+feat[SCRUM-53-54]
+REL-01
+RF-05
+US-07
+SCRUM-56
+feat/SCRUM-56-60
+feat[SCRUM-56-60]
+REL-01
+RF-05
+US-07
+SCRUM-60
+feat/SCRUM-56-60
+feat[SCRUM-56-60]
+REL-01
+RF-06
+US-06
+SCRUM-50
+feat/SCRUM-50
+feat[SCRUM-50]
+REL-01
+RF-08
+US-02
+SCRUM-35
+feat/SCRUM-37-38-39
+feat[SCRUM-35]
+REL-01
+RF-08
+US-08
+SCRUM-63
+feat/SCRUM-63
+feat[SCRUM-63]
+REL-01
+RF-08
+US-09
+SCRUM-67
+feat/SCRUM-67-68
+feat[SCRUM-67-68]
+REL-01
+RF-08
+US-09
+SCRUM-68
+feat/SCRUM-67-68
+feat[SCRUM-67-68]
+REL-01
+SPRINT 2 — Concluída
+Requisito
+User Story
+Issue
+Branch
+Commit
+Release
+RF-04
+US-12
+SCRUM-72
+feat/SCRUM-72
+feat[SCRUM-72]
+REL-02
+RF-04
+US-12
+SCRUM-73
+feat/SCRUM-73-74
+feat[SCRUM-73]
+REL-02
+RF-04
+US-12
+SCRUM-74
+feat/SCRUM-73-74
+feat[SCRUM-74]
+REL-02
+RF-04
+US-13
+SCRUM-75
+feat/SCRUM-75-77
+feat[SCRUM-75-77]
+REL-02
+RF-04
+US-13
+SCRUM-76
+feat/SCRUM-75-77
+feat[SCRUM-75-77]
+REL-02
+RF-04
+US-13
+SCRUM-77
+feat/SCRUM-75-77
+feat[SCRUM-75-77]
+REL-02
+RF-04
+US-13
+SCRUM-78
+feat/SCRUM-76-77-78
+feat[SCRUM-78]
+REL-02
+RF-04
+US-14
+SCRUM-79
+feat/SCRUM-79-81
+feat[SCRUM-79-81]]
+REL-02
+RF-04
+US-14
+SCRUM-80
+feat/SCRUM-80
+feat[SCRUM-80]
+REL-02
+RF-04
+US-14
+SCRUM-81
+feat/SCRUM-79-81
+feat[SCRUM-81]
+REL-02
+RF-04
+US-15
+SCRUM-82
+[PREENCHER]
+[PREENCHER]
+REL-02
+RF-04
+US-15
+SCRUM-83
+feat/SCRUM-83-84
+feat[SCRUM-83]
+REL-02
+RF-04
+US-15
+SCRUM-84
+feat/SCRUM-83-84
+feat[SCRUM-84]
+REL-02
+SPRINT 3 — Concluída
+Requisito
+User Story
+Issue
+Branch
+Commit
+Release
+RF-01
+US-20
+SCRUM-89 
+feat-SCRUM-86]
+feat[SCRUM-86]
+REL-03
+RF-04
+US-19
+SCRUM-88 
+feat-SCRUM-88] 
+feat[SCRUM-88]
+REL-03
+RF-05
+US-18
+SCRUM-87 
+feat/SRUM-114
+feat[SCRUM-114]
+REL-03
+RF-07
+US-10
+SCRUM-86 
+feat-SCRUM-86]
+feat[SCRUM-86]
+REL-03
+RF-08
+US-17
+SCRUM-69 
+feat/SCRUM-71 
+feat[SCRUM-71]
+REL-03
+
+9.2 Matriz Release → Funcionalidades
+Relaciona versões do sistema com funcionalidades entregues.
+
+Release
+Requisitos Incluídos
+Data
+REL-01
+RF-01, RF-02, RF-03, RF-05, RF-06, RF-08
+05/04
+REL-02
+RF-02, RF-04
+03/05
+REL-03
+RF-01, RF-04, RF-05, RF-07, RF-08
+31/05
+
+
