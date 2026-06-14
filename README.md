@@ -249,18 +249,6 @@ feat[SCRUM-88]
 
 Assim, o requisito pode ser rastreado da documentacao ate a entrega de codigo.
 
-## Roteiro Curto De Fala
-
-> A rastreabilidade do projeto Tecsus conecta requisitos funcionais, user stories, issues do Jira, implementacoes no GitLab e releases.
-
-> Para isso, usamos IDs padronizados, como `RF-04` para requisitos funcionais, `US-19` para user stories, `SCRUM-88` para issues e `REL-03` para releases.
-
-> No Jira, as issues sao categorizadas com o requisito correspondente. Dessa forma, consigo pesquisar por `RF-04` e visualizar todas as tasks ligadas a esse requisito.
-
-> No GitLab, a ligacao aparece nas branches, commits e merge requests. Assim, o mesmo identificador usado no Jira tambem permite encontrar a implementacao.
-
-> O resultado final e uma matriz de rastreabilidade que mostra o caminho completo: requisito, user story, issue, branch, commit e release.
-
 ## Link Da Documentacao
 
 Documento original:
