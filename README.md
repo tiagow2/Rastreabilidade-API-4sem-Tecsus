@@ -4,8 +4,6 @@ Este repositorio documenta a estrategia de rastreabilidade utilizada no projeto 
 
 A rastreabilidade permite acompanhar a evolucao de uma necessidade desde a solicitacao inicial ate a entrega final, conectando requisitos, user stories, issues do Jira, branches, commits, merge requests, pipelines e releases.
 
-## Mini Apresentacao
-
 ### 1. Objetivo
 
 O objetivo da rastreabilidade e garantir que cada funcionalidade entregue consiga ser ligada aos artefatos que justificam sua existencia.
