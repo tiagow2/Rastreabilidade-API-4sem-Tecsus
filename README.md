@@ -125,6 +125,11 @@ Exemplos usados na rastreabilidade:
 | `US-18` | Media | Receber notificacoes sobre alertas. | 3 |
 | `US-19` | Baixa | Aplicar filtros e pesquisa detalhada de estacoes. | 3 |
 | `US-20` | Baixa | Cadastrar parametros com valor, offset e nome. | 3 |
+| `US-21` | Media | Exibir a listagem de estacoes de forma paginada para melhorar o desempenho da interface. | 4 |
+| `US-22` | Media | Registrar acoes criticas em logs de auditoria para manter historico e seguranca. | 4 |
+| `US-23` | Media | Visualizar um resumo da saude das estacoes e dos alertas emitidos no dia. | 4 |
+| `US-24` | Media | Validar email e senha no cadastro e login para aumentar a seguranca das contas. | 4 |
+| `US-25` | Media | Permitir redefinicao de senha para recuperacao autonoma e segura do acesso. | 4 |
 
 ## Sprint Backlog
 
@@ -141,6 +146,31 @@ Exemplos da Sprint 3:
 | `SCRUM-88` | Aplicacao de filtros e pesquisa detalhada. | 3 |
 | `SCRUM-89` | Cadastrar parametros com valor, offset e nome. | 3 |
 | `SCRUM-114` | Alterar logica backend para geracao de alertas. | 3 |
+
+Exemplos da Sprint 4:
+
+| Issue | Descricao | Sprint |
+|---|---|---|
+| `SCRUM-137` | Listagem paginada das estacoes. | 4 |
+| `SCRUM-138` | Registro automatico de logs de auditoria para acoes criticas. | 4 |
+| `SCRUM-139` | Desenvolver logica backend para paginacao de estacoes. | 4 |
+| `SCRUM-140` | Implementar logica frontend para buscar estacoes com limitacao. | 4 |
+| `SCRUM-141` | Criar componentes responsaveis pela paginacao. | 4 |
+| `SCRUM-142` | Desenvolver logica backend para registro automatico dos logs de auditoria. | 4 |
+| `SCRUM-143` | Desenvolver interface do log de auditoria. | 4 |
+| `SCRUM-144` | Implementar logica frontend para registro automatico dos logs. | 4 |
+| `SCRUM-145` | Resumo visual da saude das estacoes e alertas do dia. | 4 |
+| `SCRUM-146` | Desenvolver logica backend para resumo diario. | 4 |
+| `SCRUM-147` | Desenvolver componentes e interface no painel administrativo. | 4 |
+| `SCRUM-148` | Conectar endpoint para recebimento dos dados do resumo. | 4 |
+| `SCRUM-149` | Validacao de email e senha no cadastro e login. | 4 |
+| `SCRUM-150` | Redefinicao de senha para recuperacao de acesso. | 4 |
+| `SCRUM-151` | Desenvolver logica backend para validacao de email e senha. | 4 |
+| `SCRUM-152` | Implementar logica frontend para validacao completa. | 4 |
+| `SCRUM-153` | Desenvolver logica backend para atualizacao de senha e envio de codigo por email. | 4 |
+| `SCRUM-154` | Desenvolver interface para recuperacao de senha. | 4 |
+| `SCRUM-155` | Conectar frontend ao endpoint de atualizacao de senha. | 4 |
+| `SCRUM-156` | Refatorar o ambiente de deploy. | 4 |
 
 ## Convencao de Commits
 
@@ -217,6 +247,31 @@ A matriz conecta requisito, user story, issue, branch, commit e release.
 | `RF-07` | `US-10` | `SCRUM-86` | `feat-SCRUM-86` | `feat[SCRUM-86]` | `REL-03` |
 | `RF-08` | `US-17` | `SCRUM-69` | `feat/SCRUM-71` | `feat[SCRUM-71]` | `REL-03` |
 
+### Sprint 4 - Aberta
+
+| Requisito | User Story | Issue | Branch | Commit | Release |
+|---|---|---|---|---|---|
+| `RF-01`, `RF-02` | `US-21` | `SCRUM-137` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-01`, `RF-02` | `US-21` | `SCRUM-139` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-01`, `RF-02` | `US-21` | `SCRUM-140` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-01`, `RF-02` | `US-21` | `SCRUM-141` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-22` | `SCRUM-138` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-22` | `SCRUM-142` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-22` | `SCRUM-143` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-22` | `SCRUM-144` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-04`, `RF-05` | `US-23` | `SCRUM-145` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-04`, `RF-05` | `US-23` | `SCRUM-146` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-04`, `RF-05` | `US-23` | `SCRUM-147` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-04`, `RF-05` | `US-23` | `SCRUM-148` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-24` | `SCRUM-149` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-24` | `SCRUM-151` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-24` | `SCRUM-152` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-25` | `SCRUM-150` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-25` | `SCRUM-153` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-25` | `SCRUM-154` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-25` | `SCRUM-155` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RNF-04` | - | `SCRUM-156` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+
 > Observacao: linhas marcadas como `[PREENCHER]` na documentacao original indicam dados que ainda precisam ser completados com informacoes do GitLab.
 
 ## Releases
@@ -226,6 +281,7 @@ A matriz conecta requisito, user story, issue, branch, commit e release.
 | `REL-01` | `RF-01`, `RF-02`, `RF-03`, `RF-05`, `RF-06`, `RF-08` | 05/04 |
 | `REL-02` | `RF-02`, `RF-04` | 03/05 |
 | `REL-03` | `RF-01`, `RF-04`, `RF-05`, `RF-07`, `RF-08` | 31/05 |
+| `REL-04` | `RF-01`, `RF-02`, `RF-04`, `RF-05`, `RF-08`, `RNF-04` | `[PREENCHER]` |
 
 ## Como Consultar Por Requisito
 

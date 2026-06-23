@@ -200,6 +200,26 @@ US-20
 Baixa
 Como administrador, quero que o sistema permita cadastrar parâmetros com suas principais informações (valor, offset e nome), para que eu tenha uma maior diversidade e conhecimento dos dados coletados.
 3
+US-21
+Média
+Como usuário, quero que o sistema permita uma listagem paginada das estações, para que a interface carregue rapidamente e não trave caso houver muitas estações.
+4
+US-22
+Média
+Como administrador do sistema, quero que as ações críticas do sistema sejam registradas automaticamente, para manter um histórico transparente e seguro para auditorias.
+4
+US-23
+Média
+Como administrador, quero visualizar um resumo visual simples com a saúde geral das estações e o total de alertas emitidos no dia, para entender rapidamente o status da rede.
+4
+US-24
+Média
+Como usuário do sistema, quero que meus dados de e-mail e senha sejam validados durante o cadastro e login, para garantir que minha conta esteja protegida.
+4
+US-25
+Média
+Como usuário, quero poder solicitar a redefinição da minha senha caso eu a esqueça, para recuperar o acesso à minha conta de forma autônoma e segura.
+4
 
 
 6. Sprint Backlog — Tarefas Técnicas
@@ -322,6 +342,66 @@ Aplicação de filtros e pesquisa detalhada
 SCRUM-89 
 Cadastrar parâmetros (valor, offset e nome) 
 3
+SCRUM-137
+Listagem paginada das estações
+4
+SCRUM-138
+Registro automático de logs de auditoria para ações críticas
+4
+SCRUM-139
+Desenvolver lógica de backend para a paginação de estações
+4
+SCRUM-140
+Implementação da lógica no frontend para buscar as estações com limitações
+4
+SCRUM-141
+Implementação da lógica e criação dos componentes responsáveis pela paginação
+4
+SCRUM-142
+Desenvolvimento de lógica de backend para o registro automático dos logs de auditoria
+4
+SCRUM-143
+Desenvolvimento da interface do log de auditoria
+4
+SCRUM-144
+Implementação da lógica no frontend para o registro automático dos logs
+4
+SCRUM-145
+Resumo visual da saúde geral das estações e alertas emitidos no dia
+4
+SCRUM-146
+Desenvolvimento de lógica backend para coleta e disponibilização dos dados do resumo diário
+4
+SCRUM-147
+Desenvolvimento dos componentes e interface no painel administrativo
+4
+SCRUM-148
+Conexão com o endpoint para o recebimento dos dados
+4
+SCRUM-149
+Validação de e-mail e senha durante cadastro e login
+4
+SCRUM-150
+Redefinição de senha para recuperação de acesso
+4
+SCRUM-151
+Desenvolvimento de lógica backend para a validação de e-mail e senha
+4
+SCRUM-152
+Implementação da lógica no frontend para validação completa
+4
+SCRUM-153
+Desenvolvimento da lógica backend para atualização de senha e geração de código para envio via e-mail
+4
+SCRUM-154
+Desenvolvimento da interface para recuperação de senha
+4
+SCRUM-155
+Conexão do frontend com endpoint para atualização de senha
+4
+SCRUM-156
+Refatorar o ambiente de deploy
+4
 
 
 7. Convenção de Commits
@@ -355,7 +435,7 @@ Request → Requisito → Issue (Jira) → Branch → Commit → Merge Request �
 
 9. Matrizes de Rastreabilidade
 9.1 Matriz de Rastreabilidade Principal
-Matriz central do documento conectando requisito, User Story, issue, branch, commit, teste e release. Sprint 1 concluída (azul), Sprint 2 concluída (verde), Sprint 3 em andamento (laranja). Linhas marcadas com [PREENCHER] aguardam dados do GitLab.
+Matriz central do documento conectando requisito, User Story, issue, branch, commit, teste e release. Sprint 1 concluída (azul), Sprint 2 concluída (verde), Sprint 3 concluída (laranja) e Sprint 4 aberta/planejada (amarelo). Linhas marcadas com [PREENCHER] aguardam dados do GitLab.
 
 SPRINT 1 — Concluída
 Requisito
@@ -576,6 +656,133 @@ SCRUM-69
 feat/SCRUM-71 
 feat[SCRUM-71]
 REL-03
+SPRINT 4 — Aberta
+Requisito
+User Story
+Issue
+Branch
+Commit
+Release
+RF-01, RF-02
+US-21
+SCRUM-137
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-01, RF-02
+US-21
+SCRUM-139
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-01, RF-02
+US-21
+SCRUM-140
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-01, RF-02
+US-21
+SCRUM-141
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-22
+SCRUM-138
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-22
+SCRUM-142
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-22
+SCRUM-143
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-22
+SCRUM-144
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-04, RF-05
+US-23
+SCRUM-145
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-04, RF-05
+US-23
+SCRUM-146
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-04, RF-05
+US-23
+SCRUM-147
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-04, RF-05
+US-23
+SCRUM-148
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-24
+SCRUM-149
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-24
+SCRUM-151
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-24
+SCRUM-152
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-25
+SCRUM-150
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-25
+SCRUM-153
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-25
+SCRUM-154
+[PREENCHER]
+[PREENCHER]
+REL-04
+RF-02, RF-08
+US-25
+SCRUM-155
+[PREENCHER]
+[PREENCHER]
+REL-04
+RNF-04
+-
+SCRUM-156
+[PREENCHER]
+[PREENCHER]
+REL-04
 
 9.2 Matriz Release → Funcionalidades
 Relaciona versões do sistema com funcionalidades entregues.
@@ -592,5 +799,7 @@ RF-02, RF-04
 REL-03
 RF-01, RF-04, RF-05, RF-07, RF-08
 31/05
-
+REL-04
+RF-01, RF-02, RF-04, RF-05, RF-08, RNF-04
+[PREENCHER]
 
