@@ -172,6 +172,20 @@ Exemplos da Sprint 4:
 | `SCRUM-155` | Conectar frontend ao endpoint de atualizacao de senha. | 4 |
 | `SCRUM-156` | Refatorar o ambiente de deploy. | 4 |
 
+### Hierarquia Da Sprint 4
+
+Na Sprint 4, as historias principais foram mantidas como tasks pai no Jira, e a implementacao foi dividida em subtasks.
+
+| Task pai | User Story | Tasks filhas | Requisitos relacionados |
+|---|---|---|---|
+| `SCRUM-137` | `US-21` | `SCRUM-139`, `SCRUM-140`, `SCRUM-141` | `RF-01`, `RF-02` |
+| `SCRUM-138` | `US-22` | `SCRUM-142`, `SCRUM-143`, `SCRUM-144` | `RF-02`, `RF-08` |
+| `SCRUM-145` | `US-23` | `SCRUM-146`, `SCRUM-147`, `SCRUM-148` | `RF-04`, `RF-05` |
+| `SCRUM-149` | `US-24` | `SCRUM-151`, `SCRUM-152` | `RF-02`, `RF-08` |
+| `SCRUM-150` | `US-25` | `SCRUM-153`, `SCRUM-154`, `SCRUM-155` | `RF-02`, `RF-08` |
+
+`SCRUM-156` e uma tarefa tecnica de DevOps relacionada ao `RNF-04`.
+
 ## Convencao de Commits
 
 O projeto utiliza uma adaptacao de Conventional Commits para ligar alteracoes de codigo as issues do Jira.
