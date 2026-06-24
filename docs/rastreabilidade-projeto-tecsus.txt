@@ -768,8 +768,8 @@ Release
 RF-01, RF-02
 US-21
 SCRUM-137
-Ver SCRUM-139, SCRUM-140 e SCRUM-141
-Ver subtasks
+Task pai das subtasks: SCRUM-139, SCRUM-140 e SCRUM-141
+Evidências nas subtasks
 REL-04
 RF-01, RF-02
 US-21
@@ -816,8 +816,8 @@ REL-04
 RF-04, RF-05
 US-23
 SCRUM-145
-Ver SCRUM-146, SCRUM-147 e SCRUM-148
-Ver subtasks
+Task pai das subtasks: SCRUM-146, SCRUM-147 e SCRUM-148
+Evidências nas subtasks
 REL-04
 RF-04, RF-05
 US-23
@@ -880,7 +880,7 @@ SCRUM-155
 [PREENCHER]
 REL-04
 RNF-04
--
+Tarefa técnica DevOps
 SCRUM-156
 Frontend: SCRUM-156-refatorar-o-ambiente-de-deploy; Backend: SCRUM-156-refatorar-o-ambiente-de-deploy
 00ce08e3; 0a787646

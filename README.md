@@ -288,7 +288,7 @@ A matriz conecta requisito, user story, issue, branch, commit e release.
 
 | Requisito | User Story | Issue | Branch | Commit | Release |
 |---|---|---|---|---|---|
-| `RF-01`, `RF-02` | `US-21` | `SCRUM-137` | Ver `SCRUM-139`, `SCRUM-140` e `SCRUM-141` | Ver subtasks | `REL-04` |
+| `RF-01`, `RF-02` | `US-21` | `SCRUM-137` | Task pai das subtasks: `SCRUM-139`, `SCRUM-140`, `SCRUM-141` | Evidencias nas subtasks | `REL-04` |
 | `RF-01`, `RF-02` | `US-21` | `SCRUM-139` | Backend: `SCRUM-139-desenvolver-logica-de-backend-para-a-paginacao-de-estacoes`<br/>Backend teste: `test/SCRUM-139-station-pagination` | `c6b4928d`<br/>`ae51c41d` | `REL-04` |
 | `RF-01`, `RF-02` | `US-21` | `SCRUM-140` | Frontend: `feat/SCRUM-140-implementacao-da-logica-no-frontend-para-buscar-as-estacoes-com-limitacoes` | `582b6f06` | `REL-04` |
 | `RF-01`, `RF-02` | `US-21` | `SCRUM-141` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
@@ -296,7 +296,7 @@ A matriz conecta requisito, user story, issue, branch, commit e release.
 | `RF-02`, `RF-08` | `US-22` | `SCRUM-142` | Backend: `feat/SCRUM-142-desenvolvimento-de-logica-de-backend-para-o-registro-automatico-dos-logs-de-auditoria`<br/>Backend teste: `test/SCRUM-142-audit-log` | `11d2058c`<br/>`e6bdc325` | `REL-04` |
 | `RF-02`, `RF-08` | `US-22` | `SCRUM-143` | Frontend: `feat/SCRUM-143-interface-auditLog` | `dbabfa45` | `REL-04` |
 | `RF-02`, `RF-08` | `US-22` | `SCRUM-144` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-04`, `RF-05` | `US-23` | `SCRUM-145` | Ver `SCRUM-146`, `SCRUM-147` e `SCRUM-148` | Ver subtasks | `REL-04` |
+| `RF-04`, `RF-05` | `US-23` | `SCRUM-145` | Task pai das subtasks: `SCRUM-146`, `SCRUM-147`, `SCRUM-148` | Evidencias nas subtasks | `REL-04` |
 | `RF-04`, `RF-05` | `US-23` | `SCRUM-146` | Backend: `feat/SRCUM-146-admin-summary-data-logic`<br/>Backend teste: `test/SCRUM-146-admin-summary-data-logic` | `b3ae9b63`<br/>`89a4272c` | `REL-04` |
 | `RF-04`, `RF-05` | `US-23` | `SCRUM-147` | Frontend: `feat/SCRUM-147-admin-station-semmary`<br/>Frontend teste: `test/SCRUM-147-admin-summary` | `a9cd463f`<br/>`4d18788c` | `REL-04` |
 | `RF-04`, `RF-05` | `US-23` | `SCRUM-148` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
@@ -307,7 +307,7 @@ A matriz conecta requisito, user story, issue, branch, commit e release.
 | `RF-02`, `RF-08` | `US-25` | `SCRUM-153` | Backend: `feat/SCRUM-153-desenvolvimento-da-logica-backend-para-atualizacao-de-senha-e-geracao-de-codigo-para` | `0acdb91c` | `REL-04` |
 | `RF-02`, `RF-08` | `US-25` | `SCRUM-154` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
 | `RF-02`, `RF-08` | `US-25` | `SCRUM-155` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RNF-04` | - | `SCRUM-156` | Frontend: `SCRUM-156-refatorar-o-ambiente-de-deploy`<br/>Backend: `SCRUM-156-refatorar-o-ambiente-de-deploy` | `00ce08e3`<br/>`0a787646` | `REL-04` |
+| `RNF-04` | Tarefa tecnica DevOps | `SCRUM-156` | Frontend: `SCRUM-156-refatorar-o-ambiente-de-deploy`<br/>Backend: `SCRUM-156-refatorar-o-ambiente-de-deploy` | `00ce08e3`<br/>`0a787646` | `REL-04` |
 
 > Observacao: linhas marcadas como `[PREENCHER]` na documentacao original indicam dados que ainda precisam ser completados com informacoes do GitLab.
 
