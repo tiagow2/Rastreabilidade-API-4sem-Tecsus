@@ -172,6 +172,43 @@ Exemplos da Sprint 4:
 | `SCRUM-155` | Conectar frontend ao endpoint de atualizacao de senha. | 4 |
 | `SCRUM-156` | Refatorar o ambiente de deploy. | 4 |
 
+### Hierarquia Da Sprint 4
+
+Na Sprint 4, as historias principais foram mantidas como tasks pai no Jira, e a implementacao foi dividida em subtasks.
+
+| Task pai | User Story | Tasks filhas | Requisitos relacionados |
+|---|---|---|---|
+| `SCRUM-137` | `US-21` | `SCRUM-139`, `SCRUM-140`, `SCRUM-141` | `RF-01`, `RF-02` |
+| `SCRUM-138` | `US-22` | `SCRUM-142`, `SCRUM-143`, `SCRUM-144` | `RF-02`, `RF-08` |
+| `SCRUM-145` | `US-23` | `SCRUM-146`, `SCRUM-147`, `SCRUM-148` | `RF-04`, `RF-05` |
+| `SCRUM-149` | `US-24` | `SCRUM-151`, `SCRUM-152` | `RF-02`, `RF-08` |
+| `SCRUM-150` | `US-25` | `SCRUM-153`, `SCRUM-154`, `SCRUM-155` | `RF-02`, `RF-08` |
+
+`SCRUM-156` e uma tarefa tecnica de DevOps relacionada ao `RNF-04`.
+
+### Evidencias GitLab Da Sprint 4
+
+As evidencias abaixo ligam as tasks do Jira aos artefatos encontrados no GitLab. Os nomes das branches foram mantidos como aparecem no GitLab, inclusive quando possuem diferencas de digitacao.
+
+| Repositorio | Issue | Branch | Commit |
+|---|---|---|---|
+| Frontend | `SCRUM-138` | `test/SCRUM-138-signUp-To-auditLog` | `e052b38e chore: atualizando testes de cy` |
+| Frontend | `SCRUM-140` | `feat/SCRUM-140-implementacao-da-logica-no-frontend-para-buscar-as-estacoes-com-limitacoes` | `582b6f06 fix/SCRUM-140 corrige conflitos de merge` |
+| Frontend | `SCRUM-143` | `feat/SCRUM-143-interface-auditLog` | `dbabfa45 feat[SCRUM-143]: cria interface de log de auditoria` |
+| Frontend | `SCRUM-147` | `feat/SCRUM-147-admin-station-semmary` | `a9cd463f feat[SCRUM-147]: Implementa sumario de estacoes no painel de admin` |
+| Frontend | `SCRUM-147` | `test/SCRUM-147-admin-summary` | `4d18788c chore: pipeline config` |
+| Frontend | `SCRUM-156` | `SCRUM-156-refatorar-o-ambiente-de-deploy` | `00ce08e3 fix[SCRUM-156]: remocao de ip fixo` |
+| Backend | `SCRUM-139` | `SCRUM-139-desenvolver-logica-de-backend-para-a-paginacao-de-estacoes` | `c6b4928d fix/SCRUM-139: Corrige a condicao para merge request para a branch test/` |
+| Backend | `SCRUM-139` | `test/SCRUM-139-station-pagination` | `ae51c41d fix/SCRUM-139 Corrige banco da pipeline que estava vazio durante a pipeline` |
+| Backend | `SCRUM-142` | `feat/SCRUM-142-desenvolvimento-de-logica-de-backend-para-o-registro-automatico-dos-logs-de-auditoria` | `11d2058c fix/SCRUM-142 Corrige controllers, routes e services que falharam nos testes de integracao` |
+| Backend | `SCRUM-142` | `test/SCRUM-142-audit-log` | `e6bdc325 B` |
+| Backend | `SCRUM-146` | `feat/SRCUM-146-admin-summary-data-logic` | `b3ae9b63 feat[SCRUM-146]: Implementa rotas para dados do sumario de estacoes do painel de admin` |
+| Backend | `SCRUM-146` | `test/SCRUM-146-admin-summary-data-logic` | `89a4272c Merge branch 'test/SCRUM-150-Recuperação-de-senha' into 'develop'` |
+| Backend | `SCRUM-150` | `test/SCRUM-150-Recuperação-de-senha` | `b847505a Merge branch...` |
+| Backend | `SCRUM-150` | `integration` | `2e83ca5d feat[SCRUM-150]: Fluxo de recuperacao de senha via email` |
+| Backend | `SCRUM-153` | `feat/SCRUM-153-desenvolvimento-da-logica-backend-para-atualizacao-de-senha-e-geracao-de-codigo-para` | `0acdb91c feat[SCRUM-153]: implementa redefinicao de senha com codigo via email SendGrid` |
+| Backend | `SCRUM-156` | `SCRUM-156-refatorar-o-ambiente-de-deploy` | `0a787646 fix[SCRUM-156]: atualiza cors dinamicamente para suportar credenciais` |
+
 ## Convencao de Commits
 
 O projeto utiliza uma adaptacao de Conventional Commits para ligar alteracoes de codigo as issues do Jira.
@@ -251,26 +288,26 @@ A matriz conecta requisito, user story, issue, branch, commit e release.
 
 | Requisito | User Story | Issue | Branch | Commit | Release |
 |---|---|---|---|---|---|
-| `RF-01`, `RF-02` | `US-21` | `SCRUM-137` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-01`, `RF-02` | `US-21` | `SCRUM-139` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-01`, `RF-02` | `US-21` | `SCRUM-140` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-01`, `RF-02` | `US-21` | `SCRUM-137` | Ver `SCRUM-139`, `SCRUM-140` e `SCRUM-141` | Ver subtasks | `REL-04` |
+| `RF-01`, `RF-02` | `US-21` | `SCRUM-139` | Backend: `SCRUM-139-desenvolver-logica-de-backend-para-a-paginacao-de-estacoes`<br/>Backend teste: `test/SCRUM-139-station-pagination` | `c6b4928d`<br/>`ae51c41d` | `REL-04` |
+| `RF-01`, `RF-02` | `US-21` | `SCRUM-140` | Frontend: `feat/SCRUM-140-implementacao-da-logica-no-frontend-para-buscar-as-estacoes-com-limitacoes` | `582b6f06` | `REL-04` |
 | `RF-01`, `RF-02` | `US-21` | `SCRUM-141` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-02`, `RF-08` | `US-22` | `SCRUM-138` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-02`, `RF-08` | `US-22` | `SCRUM-142` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-02`, `RF-08` | `US-22` | `SCRUM-143` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-22` | `SCRUM-138` | Frontend teste: `test/SCRUM-138-signUp-To-auditLog` | `e052b38e` | `REL-04` |
+| `RF-02`, `RF-08` | `US-22` | `SCRUM-142` | Backend: `feat/SCRUM-142-desenvolvimento-de-logica-de-backend-para-o-registro-automatico-dos-logs-de-auditoria`<br/>Backend teste: `test/SCRUM-142-audit-log` | `11d2058c`<br/>`e6bdc325` | `REL-04` |
+| `RF-02`, `RF-08` | `US-22` | `SCRUM-143` | Frontend: `feat/SCRUM-143-interface-auditLog` | `dbabfa45` | `REL-04` |
 | `RF-02`, `RF-08` | `US-22` | `SCRUM-144` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-04`, `RF-05` | `US-23` | `SCRUM-145` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-04`, `RF-05` | `US-23` | `SCRUM-146` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-04`, `RF-05` | `US-23` | `SCRUM-147` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-04`, `RF-05` | `US-23` | `SCRUM-145` | Ver `SCRUM-146`, `SCRUM-147` e `SCRUM-148` | Ver subtasks | `REL-04` |
+| `RF-04`, `RF-05` | `US-23` | `SCRUM-146` | Backend: `feat/SRCUM-146-admin-summary-data-logic`<br/>Backend teste: `test/SCRUM-146-admin-summary-data-logic` | `b3ae9b63`<br/>`89a4272c` | `REL-04` |
+| `RF-04`, `RF-05` | `US-23` | `SCRUM-147` | Frontend: `feat/SCRUM-147-admin-station-semmary`<br/>Frontend teste: `test/SCRUM-147-admin-summary` | `a9cd463f`<br/>`4d18788c` | `REL-04` |
 | `RF-04`, `RF-05` | `US-23` | `SCRUM-148` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
 | `RF-02`, `RF-08` | `US-24` | `SCRUM-149` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
 | `RF-02`, `RF-08` | `US-24` | `SCRUM-151` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
 | `RF-02`, `RF-08` | `US-24` | `SCRUM-152` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-02`, `RF-08` | `US-25` | `SCRUM-150` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RF-02`, `RF-08` | `US-25` | `SCRUM-153` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RF-02`, `RF-08` | `US-25` | `SCRUM-150` | Backend teste: `test/SCRUM-150-Recuperação-de-senha`<br/>Backend integracao: `integration` | `b847505a`<br/>`2e83ca5d` | `REL-04` |
+| `RF-02`, `RF-08` | `US-25` | `SCRUM-153` | Backend: `feat/SCRUM-153-desenvolvimento-da-logica-backend-para-atualizacao-de-senha-e-geracao-de-codigo-para` | `0acdb91c` | `REL-04` |
 | `RF-02`, `RF-08` | `US-25` | `SCRUM-154` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
 | `RF-02`, `RF-08` | `US-25` | `SCRUM-155` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
-| `RNF-04` | - | `SCRUM-156` | `[PREENCHER]` | `[PREENCHER]` | `REL-04` |
+| `RNF-04` | - | `SCRUM-156` | Frontend: `SCRUM-156-refatorar-o-ambiente-de-deploy`<br/>Backend: `SCRUM-156-refatorar-o-ambiente-de-deploy` | `00ce08e3`<br/>`0a787646` | `REL-04` |
 
 > Observacao: linhas marcadas como `[PREENCHER]` na documentacao original indicam dados que ainda precisam ser completados com informacoes do GitLab.
 
